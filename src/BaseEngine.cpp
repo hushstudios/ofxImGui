@@ -72,8 +72,8 @@ namespace ofxImGui
 	const char* BaseEngine::getClipboardString(void * userData)
 	{
 		//return &ofGetWindowPtr()->getClipboardString()[0];
-        
-        static std::string clip = ofGetWindowPtr()->getClipboardString();
+        static std::string clip;
+        clip = ofGetWindowPtr()->getClipboardString();
         return clip.c_str();
 	}
 
